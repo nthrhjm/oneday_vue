@@ -14,13 +14,10 @@ new Vue({
                 this.count -= 1;
             }
         },
-    }
+    },
+    computed: {
+        isPass() {
+            return this.count >= 60;
+        }
+    },
 });
-
-
-const point = 85;
-if (point >= 60) {
-    console.log('合格！');
-} else {
-    console.log('不合格');
-}
