@@ -12,8 +12,18 @@
 <div id="app">
     <div class="form-area__name">
         <p>名前</p>
-        <input v-model="name" type="text" name="name">
-        <p v-if="isInvalidName" class="error">名前は4文字以上で入力してください</p>
+        <input v-model="name" type="text" name="name" />
+        <p v-if="isInvalidName" class="error">名前は4文字以上を入力してください</p>
+    </div>
+    <div class="form-area__tel">
+        <p>電話番号 *ハイフン(-)なしで入力してください</p>
+        <input v-model="tel" type="tel" name="tel" />
+        <p v-if="isInvalidTel" class="error">電話番号は8文字以上を入力してください</p>
+    </div>
+    <div class="form-area__email">
+        <p>Eメールアドレス</p>
+        <input type="text" name="email" v-model="email" />
+        <p v-if="isInvalidEmail" class="error">メールアドレスの形式で入力してください</p>
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
