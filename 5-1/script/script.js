@@ -2,12 +2,11 @@ const app = new Vue({
    el: '#app',
    data() {
        return {
-           fruits: ['りんご', 'ぶどう', 'いちご', 'パイナップル'],
-           obj: {
-               name: "Taro",
-               age: 30,
-               like: "sushi",
-           }
+           items: [
+               {id: 1, label: "子"},
+               {id: 2, label: "丑"},
+               {id: 3, label: "寅"},
+           ],
        };
    },
 });
